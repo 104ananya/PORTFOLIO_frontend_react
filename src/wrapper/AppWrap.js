@@ -10,8 +10,9 @@ const AppWrap = (Component, idName, classNames) =>
           <Component />
 
           <div className="copyright">
-            <p className="p-text">@Ananya</p>
-            <p className="p-text" style={{textTransform: 'none'}}>All rights reserved</p>
+            <p className="p-text" style={{textTransform: 'none'}}>Made with ❤️ by </p>
+            <p className="p-text" style={{textTransform: 'none', fontWeight: 'normal', fontWeight: '500'}}>Ananya</p>
+            {/* © ❤️  */}
           </div>
         </div>
         <NavigationDots active={idName} />

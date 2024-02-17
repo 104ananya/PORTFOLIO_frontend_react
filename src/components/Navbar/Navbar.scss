@@ -3,10 +3,14 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 2rem;
-  background-color: rgba(255, 255, 255, 0.25);
+  padding: 0.5rem 2rem;
+  // background-color: rgba(255, 255, 255, 0.25);
+  // background-color: #ffe8f952;
+  // background-color: #ffffffa8;
+  background-color: #9c27b00a;
   backdrop-filter: blur(4px);
-  -webkit-backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(8px);
+  // border: 1px solid rgba(255, 255, 255, 0.18);
   border: 1px solid rgba(255, 255, 255, 0.18);
   position: fixed;
   z-index: 2;
@@ -18,13 +22,13 @@
   align-items: center;
 
   img {
-    width: 110px;
-    height: 30px;
+    width: 90px;
+    height: 50px;
   }
 
   @media screen and (min-width: 2000px) {
-    width: 220px;
-    height: 60px;
+    width: 180px;
+    height: 100px;
   }
 }
 
@@ -55,7 +59,7 @@
       text-transform: uppercase;
       font-weight: 500;
       flex-direction: column;
-      font-size: large;
+      font-size: medium;
 
       transition: all 0.3 ease-in-out;
 
@@ -76,94 +80,92 @@
   }
 }
 
-.app__navbar-menu{
-    width: 35px;
-    height: 35px;
-    border-radius: 50%;
-    position: relative;
+.app__navbar-menu {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  position: relative;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--secondary-color);
+
+  svg {
+    width: 70%;
+    height: 70%;
+    color: var(--white-color);
+  }
+
+  div {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 5;
+
+    padding: 1rem;
+
+    width: 60%;
+    height: 100vh;
 
     display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: var(--secondary-color);
+    justify-content: flex-end;
+    align-items: flex-end;
+    flex-direction: column;
 
-    svg{
-        width: 70%;
-        height: 70%;
-        color: var(--white-color);
+    background: url(../../assets/purple.svg);
+    background-color: var(--white-color);
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    box-shadow: 0 0 20px rgba(168, 168, 168, 0.18);
+
+    svg {
+      width: 35px;
+      height: 35px;
+      color: var(--secondary-color);
+      margin: 0.5rem 1rem;
     }
 
-    div{
-        position: fixed;
-        top: 0;
-        bottom: 0;
-        right: 0;
-        z-index: 5;
+    ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      width: 100%;
 
-        padding: 1rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
 
-        width: 60%;
-        height: 100vh;
+      li {
+        margin: 1rem;
 
-        display: flex;
-        justify-content: flex-end;
-        align-items: flex-end;
-        flex-direction: column;
+        a {
+          text-decoration: none;
+          cursor: pointer;
+          color: var(--gray-color);
+          text-transform: uppercase;
+          font-size: 1rem;
+          font-weight: 500;
 
-        background: url(../../assets/bgWhite.png);
-        background-color: var(--white-color);
-        background-size: cover;
-        background-repeat: repeat;
+          transition: all 0.3s ease-in-out;
 
-        box-shadow: 0 0 20px rgba(168, 168, 168, 0.18);
-
-        svg{
-            width: 35px;
-            height: 35px;
+          &:hover {
             color: var(--secondary-color);
-            margin: 0.5rem 1rem;
+          }
         }
-
-        ul{
-            list-style: none;
-            margin: 0;
-            padding: 0;
-            height: 100%;
-            width: 100%;
-
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-start;
-            align-items: flex-start;
-
-            li{
-                margin: 1rem;
-
-                a{
-                    text-decoration: none;
-                    cursor: pointer;
-                    color: var(--gray-color);
-                    text-transform: uppercase;
-                    font-size: 1rem;
-                    font-weight: 500;
-
-                    transition: all 0.3s ease-in-out;
-
-                    &:hover {
-                        color: var(--secondary-color);
-                    }
-                }
-            }
-
-
-        }
-
-        @media screen and (min-width: 900px) {
-            display: none;
-        }
+      }
     }
 
     @media screen and (min-width: 900px) {
-        display: none;
+      display: none;
     }
+  }
+
+  @media screen and (min-width: 900px) {
+    display: none;
+  }
 }

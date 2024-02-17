@@ -1,9 +1,12 @@
 #home {
   position: relative;
-  background: url("../../assets/bgIMG.png");
-  background-size: cover;
-  background-repeat: repeat;
+  // background: url("../../assets/bgWhite.png");
+
+  background: url("../../assets/bg01.jpg");
+  background-size: contain;
+  background-repeat: no-repeat;
   background-position: center;
+  background-color: var(--white-color);
 
   .app__wrapper {
     padding: 0;
@@ -36,7 +39,7 @@
 }
 
 .app__header-info {
-  flex: 0.65;
+  flex: 0.8;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -52,36 +55,42 @@
 .app__header-badge {
   width: 100%;
   display: flex;
-  justify-content: flex-end;
-  align-items: flex-end;
+  justify-content: flex-start;
+  align-items: flex-start;
   flex-direction: column;
 
   .badge-cmp,
   .tag-cmp {
-    padding: 1rem 2rem;
-    border: var(--white-color);
+    background-color: var(--white-color);
+    padding: 0.5rem 2rem;
+    border: solid var(--white-color);
     border-radius: 15px;
     flex-direction: row;
     width: auto;
 
-    box-shadow: 0 0 20px rgba($color: #000000, $alpha: 0.1);
+    box-shadow: 0 0 25px rgba($color: #000000, $alpha: 0.1);
   }
 
   .tag-cmp {
     flex-direction: column;
-    margin-top: 3rem;
+    margin-top: 2rem;
 
     p {
       width: 100%;
       text-transform: uppercase;
       text-align: right;
+      font-weight: 400;
     }
+  }
+
+  .badge-cmp{
+    margin-top: 1rem;
   }
 
   span {
     font-size: 2.5rem;
 
-    @media screen and (min-width: 3000px) {
+    @media screen and (min-width: 2000px) {
       font-size: 5rem;
     }
   }
@@ -93,13 +102,15 @@
 }
 
 .app__header-circles {
-  flex: 0.75;
+  flex: 0.1;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
   align-items: flex-start;
   height: 100%;
   margin-left: 1rem;
+  // padding-left: 50rem;
+  // width: 30%;
 
   div {
     width: 100%;
@@ -116,19 +127,19 @@
   }
 
   div:nth-child(1) {
-    width: 100px;
-    height: 100px;
+    width: 90px;
+    height: 90px;
   }
 
   div:nth-child(2) {
     margin: 1.75rem;
-    width: 150px;
-    height: 150px;
+    width: 120px;
+    height: 120px;
   }
 
   div:nth-child(3) {
-    width: 80px;
-    height: 80px;
+    width: 70px;
+    height: 70px;
   }
 
   // HUGE SCREEN SIZE
@@ -176,6 +187,7 @@
     width: 100%;
     object-fit: contain;
     z-index: 1;
+    // display: none;
   }
 
   .overlay_circle {
